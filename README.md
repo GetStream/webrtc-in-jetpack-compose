@@ -28,6 +28,9 @@ If you’re interested in adding powerful In-App Messaging to your app, check ou
 - [Android Samples for Stream Chat SDK on GitHub](https://github.com/getStream/android-samples)
 - [Stream Chat Compose UI Componenets Guidelines](https://getstream.io/chat/docs/sdk/android/compose/overview/)
 
+## 📲 Download APK
+Go to the [Releases](https://github.com/GetStream/webrtc-in-jetpack-compose/releases) to download the latest APK.
+
 ## 📷 Previews
 
 <p align="center">
