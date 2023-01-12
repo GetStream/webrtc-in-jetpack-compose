@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-package io.getstream.webrtc.sample.compose.webrtc
+package io.getstream.webrtc.sample.compose.webrtc.sessions
 
+import io.getstream.webrtc.sample.compose.webrtc.SignalingClient
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnectionFactory
 import kotlinx.coroutines.flow.SharedFlow
 import org.webrtc.VideoTrack
 

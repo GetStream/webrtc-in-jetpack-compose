@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.getstream.webrtc.sample.compose.webrtc
+package io.getstream.webrtc.sample.compose.webrtc.sessions
 
 import android.content.Context
 import android.hardware.camera2.CameraCharacteristics
@@ -27,8 +27,13 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.core.content.getSystemService
 import io.getstream.log.taggedLogger
+import io.getstream.webrtc.sample.compose.webrtc.SignalingClient
+import io.getstream.webrtc.sample.compose.webrtc.SignalingCommand
 import io.getstream.webrtc.sample.compose.webrtc.audio.AudioHandler
 import io.getstream.webrtc.sample.compose.webrtc.audio.AudioSwitchHandler
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnection
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnectionFactory
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

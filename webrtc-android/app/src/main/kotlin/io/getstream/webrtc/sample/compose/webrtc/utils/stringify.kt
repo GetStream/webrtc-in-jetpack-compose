@@ -16,7 +16,7 @@
 
 package io.getstream.webrtc.sample.compose.webrtc.utils
 
-import io.getstream.webrtc.sample.compose.webrtc.StreamPeerType
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerType
 import org.webrtc.IceCandidateErrorEvent
 import org.webrtc.MediaStreamTrack
 import org.webrtc.SessionDescription

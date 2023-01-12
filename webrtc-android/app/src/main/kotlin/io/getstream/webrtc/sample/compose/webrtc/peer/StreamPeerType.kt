@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.getstream.webrtc.sample.compose.webrtc
+package io.getstream.webrtc.sample.compose.webrtc.peer
 
 /**
  * The type of peer connections, either a [PUBLISHER] that sends data to the call or a [SUBSCRIBER]

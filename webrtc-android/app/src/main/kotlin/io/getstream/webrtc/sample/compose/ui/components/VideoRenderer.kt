@@ -25,7 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import io.getstream.webrtc.sample.compose.webrtc.LocalWebRtcSessionManager
+import io.getstream.webrtc.sample.compose.webrtc.sessions.LocalWebRtcSessionManager
 import org.webrtc.RendererCommon
 import org.webrtc.VideoTrack
 

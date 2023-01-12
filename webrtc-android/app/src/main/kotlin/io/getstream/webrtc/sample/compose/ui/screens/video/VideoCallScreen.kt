@@ -38,7 +38,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import io.getstream.webrtc.sample.compose.ui.components.VideoRenderer
-import io.getstream.webrtc.sample.compose.webrtc.LocalWebRtcSessionManager
+import io.getstream.webrtc.sample.compose.webrtc.sessions.LocalWebRtcSessionManager
 
 @Composable
 fun VideoCallScreen() {

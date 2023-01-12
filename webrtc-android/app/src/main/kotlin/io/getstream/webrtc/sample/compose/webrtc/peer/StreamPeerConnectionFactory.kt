@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.getstream.webrtc.sample.compose.webrtc
+package io.getstream.webrtc.sample.compose.webrtc.peer
 
 import android.content.Context
 import android.os.Build

@@ -33,11 +33,11 @@ import androidx.compose.ui.Modifier
 import io.getstream.webrtc.sample.compose.ui.screens.stage.StageScreen
 import io.getstream.webrtc.sample.compose.ui.screens.video.VideoCallScreen
 import io.getstream.webrtc.sample.compose.ui.theme.WebrtcSampleComposeTheme
-import io.getstream.webrtc.sample.compose.webrtc.LocalWebRtcSessionManager
 import io.getstream.webrtc.sample.compose.webrtc.SignalingClient
-import io.getstream.webrtc.sample.compose.webrtc.StreamPeerConnectionFactory
-import io.getstream.webrtc.sample.compose.webrtc.WebRtcSessionManager
-import io.getstream.webrtc.sample.compose.webrtc.WebRtcSessionManagerImpl
+import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnectionFactory
+import io.getstream.webrtc.sample.compose.webrtc.sessions.LocalWebRtcSessionManager
+import io.getstream.webrtc.sample.compose.webrtc.sessions.WebRtcSessionManager
+import io.getstream.webrtc.sample.compose.webrtc.sessions.WebRtcSessionManagerImpl
 
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
