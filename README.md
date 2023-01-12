@@ -2,6 +2,14 @@
 
 <h1 align="center">WebRTC in Jetpack Compose</h1></br>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://android-arsenal.com/api?level=23"><img alt="API" src="https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat"/></a>
+  <a href="https://github.com/GetStream/webrtc-in-jetpack-compose/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/webrtc-in-jetpack-compose/actions/workflows/android.yml/badge.svg"/></a>
+  <a href="https://getstream.io"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/HayesGordon/e7f3c4587859c17f3e593fd3ff5b13f4/raw/11d9d9385c9f34374ede25f6471dc743b977a914/badge.json" alt="Stream Feeds"></a>
+</p>
+
+
 This project demonstrates [WebRTC protocol](https://getstream.io/glossary/webrtc-protocol/) to facilitate real-time video communications with Jetpack Compose.
 
 The purpose of this repository is to demonstrate below:
@@ -14,19 +22,21 @@ The purpose of this repository is to demonstrate below:
 
 We're preparing to publish a blog post about **WebRTC in Jetpack Compose**. If you need to understand WebRTC and communication protocols, check out the [HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols/).
 
-If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/skydoves/android-developer-roadmap/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
-
+If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/GetStream/webrtc-in-jetpack-compose/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
 
 <a href="https://getstream.io/chat/sdk/compose">
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
 </a>
 
 ## 🛥 Stream Chat and Voice & Video calling SDK
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose/)__! We're also planning to release voice & video calling SDK very soon! If you want to be an early access to our SDK, check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video/)**.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose/)__! We're also planning to release voice & video calling SDK very soon! Check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video/)**, if you want early access to our SDK.
 
 - [Stream Chat SDK for Android on GitHub](https://github.com/getStream/stream-chat-android)
 - [Android Samples for Stream Chat SDK on GitHub](https://github.com/getStream/android-samples)
 - [Stream Chat Compose UI Componenets Guidelines](https://getstream.io/chat/docs/sdk/android/compose/overview/)
+
+## 📲 Download APK
+Go to the [Releases](https://github.com/GetStream/webrtc-in-jetpack-compose/releases) to download the latest APK.
 
 ## 📷 Previews
 
@@ -48,13 +58,14 @@ If you’re interested in adding powerful In-App Messaging to your app, check ou
 
 To build this project properly, you should follow the instructions below:
 
-1. Run the [WebRTC backend server](https://github.com/advocacies/webrtc-in-jetpack-compose/tree/main/webrtc-backend).
+1. Run the [WebRTC backend server](https://github.com/GetStream/webrtc-in-jetpack-compose/tree/main/webrtc-backend).
 2. Add the local ip address of your pc on the `local.properties` file on the project (Android Studio) like the below:
 
 ```
-SIGNALING_SERVER_IP_ADDRESS=ws://192.168.1.123:8080/rtc # You should change 192.168.1.123 to your local ip address, which is running the WebRTC backend server
+# You should change 192.168.1.123 to your local ip address, which is running the WebRTC backend server.
+SIGNALING_SERVER_IP_ADDRESS=ws://192.168.1.123:8080/rtc
 ```
-3. Lastly, run the [WebRTC android](https://github.com/advocacies/webrtc-in-jetpack-compose/tree/main/webrtc-android) project on your multiple devices to test peer communication.
+3. Lastly, run the [WebRTC android](https://github.com/GetStream/webrtc-in-jetpack-compose/tree/main/webrtc-android) project on your multiple devices to test peer communication.
 
 ## 🤝 Contribution
 
