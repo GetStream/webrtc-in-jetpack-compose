@@ -14,7 +14,7 @@ The purpose of this repository is to demonstrate below:
 
 We're preparing to publish a blog post about **WebRTC in Jetpack Compose**. If you need to understand WebRTC and communication protocols, check out the [HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols/).
 
-If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/skydoves/android-developer-roadmap/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
+If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/GetStream/webrtc-in-jetpack-compose/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
 
 
 <a href="https://getstream.io/chat/sdk/compose">
@@ -48,13 +48,13 @@ If you’re interested in adding powerful In-App Messaging to your app, check ou
 
 To build this project properly, you should follow the instructions below:
 
-1. Run the [WebRTC backend server](https://github.com/advocacies/webrtc-in-jetpack-compose/tree/main/webrtc-backend).
+1. Run the [WebRTC backend server](https://github.com/GetStream/webrtc-in-jetpack-compose/tree/main/webrtc-backend).
 2. Add the local ip address of your pc on the `local.properties` file on the project (Android Studio) like the below:
 
 ```
 SIGNALING_SERVER_IP_ADDRESS=ws://192.168.1.123:8080/rtc # You should change 192.168.1.123 to your local ip address, which is running the WebRTC backend server
 ```
-3. Lastly, run the [WebRTC android](https://github.com/advocacies/webrtc-in-jetpack-compose/tree/main/webrtc-android) project on your multiple devices to test peer communication.
+3. Lastly, run the [WebRTC android](https://github.com/GetStream/webrtc-in-jetpack-compose/tree/main/webrtc-android) project on your multiple devices to test peer communication.
 
 ## 🤝 Contribution
 
