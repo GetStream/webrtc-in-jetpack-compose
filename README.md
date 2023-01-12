@@ -16,13 +16,12 @@ We're preparing to publish a blog post about **WebRTC in Jetpack Compose**. If y
 
 If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/GetStream/webrtc-in-jetpack-compose/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
 
-
 <a href="https://getstream.io/chat/sdk/compose">
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
 </a>
 
 ## 🛥 Stream Chat and Voice & Video calling SDK
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose/)__! We're also planning to release voice & video calling SDK very soon! If you want to be an early access to our SDK, check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video/)**.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose/)__! We're also planning to release voice & video calling SDK very soon! Check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video/)**, if you want early access to our SDK.
 
 - [Stream Chat SDK for Android on GitHub](https://github.com/getStream/stream-chat-android)
 - [Android Samples for Stream Chat SDK on GitHub](https://github.com/getStream/android-samples)
