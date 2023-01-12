@@ -46,7 +46,7 @@ Go to the [Releases](https://github.com/GetStream/webrtc-in-jetpack-compose/rele
 </p>
 
 ## 🛠 Tech Sacks & Open Source Libraries
-- Minimum SDK level 21.
+- Minimum SDK level 23.
 - 100% [Jetpack Compose](https://developer.android.com/jetpack/compose) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
 - [WebRTC](https://webrtc.org/): To build real-time communication capabilities to your application that works on top of an open standard.
 - [WebRTC-android](https://github.com/webrtc-sdk/android): WebRTC pre-compiled library for android.
