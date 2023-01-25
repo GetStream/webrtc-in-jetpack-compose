@@ -39,10 +39,8 @@ import org.webrtc.MediaStream
 import org.webrtc.MediaStreamTrack
 import org.webrtc.PeerConnection
 import org.webrtc.RTCStatsReport
-import org.webrtc.RtpParameters
 import org.webrtc.RtpReceiver
 import org.webrtc.RtpTransceiver
-import org.webrtc.RtpTransceiver.RtpTransceiverInit
 import org.webrtc.SessionDescription
 
 /**
@@ -73,18 +71,6 @@ class StreamPeerConnection(
    * The wrapped connection for all the WebRTC communication.
    */
   lateinit var connection: PeerConnection
-    private set
-
-  /**
-   * Transceiver used to send video in different resolutions.
-   */
-  var videoTransceiver: RtpTransceiver? = null
-    private set
-
-  /**
-   * Transceiver used to send audio.
-   */
-  var audioTransceiver: RtpTransceiver? = null
     private set
 
   /**
@@ -209,108 +195,6 @@ class StreamPeerConnection(
   }
 
   /**
-   * Adds a local [MediaStreamTrack] with audio to a given [connection], with its [streamIds].
-   * The audio is then sent through a transceiver.
-   *
-   * @param track The track that contains audio.
-   * @param streamIds The IDs that represent the stream tracks.
-   */
-  fun addAudioTransceiver(
-    track: MediaStreamTrack,
-    streamIds: List<String>
-  ) {
-    logger.i { "[addAudioTransceiver] #sfu; #$typeTag; track: ${track.stringify()}, streamIds: $streamIds" }
-    val transceiverInit = buildAudioTransceiverInit(streamIds)
-
-    audioTransceiver = connection.addTransceiver(track, transceiverInit)
-  }
-
-  /**
-   * Creates the initialization configuration for the [RtpTransceiver], when sending audio.
-   *
-   * @param streamIds The list of stream IDs to bind to this transceiver.
-   */
-  private fun buildAudioTransceiverInit(streamIds: List<String>): RtpTransceiverInit {
-    val fullQuality = RtpParameters.Encoding(
-      "a",
-      true,
-      1.0
-    ).apply {
-      maxBitrateBps = 500_000
-    }
-
-    val encodings = listOf(fullQuality)
-
-    return RtpTransceiverInit(
-      RtpTransceiver.RtpTransceiverDirection.SEND_ONLY,
-      streamIds,
-      encodings
-    )
-  }
-
-  /**
-   * Adds a local [MediaStreamTrack] with video to a given [connection], with its [streamIds].
-   * The video is then sent in a few different resolutions using simulcast.
-   *
-   * @param track The track that contains video.
-   * @param streamIds The IDs that represent the stream tracks.
-   */
-  fun addVideoTransceiver(track: MediaStreamTrack, streamIds: List<String>) {
-    logger.d { "[addVideoTransceiver] #sfu; #$typeTag; track: ${track.stringify()}, streamIds: $streamIds" }
-    val transceiverInit = buildVideoTransceiverInit(streamIds)
-
-    videoTransceiver = connection.addTransceiver(track, transceiverInit)
-  }
-
-  /**
-   * Creates the initialization configuration for the [RtpTransceiver], when sending video.
-   *
-   * @param streamIds The list of stream IDs to bind to this transceiver.
-   */
-  private fun buildVideoTransceiverInit(streamIds: List<String>): RtpTransceiverInit {
-    /**
-     * We create different RTP encodings for the transceiver.
-     * Full quality, represented by "f" ID.
-     * Half quality, represented by "h" ID.
-     * Quarter quality, represented by "q" ID.
-     *
-     * Their bitrate is also roughly as the name states - maximum for "full", ~half of that
-     * for "half" and another half, or total quarter of maximum, for "quarter".
-     */
-    val quarterQuality = RtpParameters.Encoding(
-      "q",
-      true,
-      4.0
-    ).apply {
-      maxBitrateBps = 125_000
-    }
-
-    val halfQuality = RtpParameters.Encoding(
-      "h",
-      true,
-      2.0
-    ).apply {
-      maxBitrateBps = 500_000
-    }
-
-    val fullQuality = RtpParameters.Encoding(
-      "f",
-      true,
-      1.0
-    ).apply {
-      maxBitrateBps = 1_200_000
-    }
-
-    val encodings = listOf(quarterQuality, halfQuality, fullQuality)
-
-    return RtpTransceiverInit(
-      RtpTransceiver.RtpTransceiverDirection.SEND_ONLY,
-      streamIds,
-      encodings
-    )
-  }
-
-  /**
    * Peer connection listeners.
    */
 
@@ -381,12 +265,10 @@ class StreamPeerConnection(
   override fun onIceConnectionChange(newState: PeerConnection.IceConnectionState?) {
     logger.i { "[onIceConnectionChange] #sfu; #$typeTag; newState: $newState" }
     when (newState) {
-      PeerConnection.IceConnectionState.CLOSED, PeerConnection.IceConnectionState.FAILED, PeerConnection.IceConnectionState.DISCONNECTED -> {
-        statsJob?.cancel()
-      }
-      PeerConnection.IceConnectionState.CONNECTED -> {
-        statsJob = observeStats()
-      }
+      PeerConnection.IceConnectionState.CLOSED,
+      PeerConnection.IceConnectionState.FAILED,
+      PeerConnection.IceConnectionState.DISCONNECTED -> statsJob?.cancel()
+      PeerConnection.IceConnectionState.CONNECTED -> statsJob = observeStats()
       else -> Unit
     }
   }
@@ -419,7 +301,6 @@ class StreamPeerConnection(
   /**
    * Domain - [PeerConnection] and [PeerConnection.Observer] related callbacks.
    */
-
   override fun onRemoveTrack(receiver: RtpReceiver?) {
     logger.i { "[onRemoveTrack] #sfu; #$typeTag; receiver: $receiver" }
   }

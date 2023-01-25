@@ -239,6 +239,7 @@ class WebRtcSessionManagerImpl(
     result.onSuccess {
       signalingClient.sendCommand(SignalingCommand.OFFER, offer.description)
     }
+    logger.d { "[SDP] send offer: $offer" }
   }
 
   private suspend fun sendAnswer() {
@@ -250,13 +251,16 @@ class WebRtcSessionManagerImpl(
     result.onSuccess {
       signalingClient.sendCommand(SignalingCommand.ANSWER, answer.description)
     }
+    logger.d { "[SDP] send answer: $answer" }
   }
 
   private fun handleOffer(sdp: String) {
+    logger.d { "[SDP] handle offer: $sdp" }
     offer = sdp
   }
 
   private suspend fun handleAnswer(sdp: String) {
+    logger.d { "[SDP] handle answer: $sdp" }
     peerConnection.setRemoteDescription(
       SessionDescription(SessionDescription.Type.ANSWER, sdp)
     )
