@@ -69,7 +69,7 @@ fun VideoCallScreen() {
     }
 
     if (localVideoTrack != null) {
-      FloatingParticipantItem(
+      FloatingVideoRenderer(
         modifier = Modifier
           .size(width = 150.dp, height = 210.dp)
           .clip(RoundedCornerShape(16.dp))

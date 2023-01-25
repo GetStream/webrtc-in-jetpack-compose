@@ -52,7 +52,7 @@ import org.webrtc.VideoTrack
  * @param modifier Modifier for styling.
  */
 @Composable
-fun FloatingParticipantItem(
+fun FloatingVideoRenderer(
   videoTrack: VideoTrack,
   parentBounds: IntSize,
   paddingValues: PaddingValues,
