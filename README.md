@@ -66,6 +66,13 @@ To build this project properly, you should follow the instructions below:
 # You should change 192.168.1.123 to your local ip address, which is running the WebRTC backend server.
 SIGNALING_SERVER_IP_ADDRESS=ws://192.168.1.123:8080/rtc
 ```
+
+You will get your local IP address by typing the command below on your terminal:
+
+```
+ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' 
+```
+
 3. Lastly, run the [WebRTC android](https://github.com/GetStream/webrtc-in-jetpack-compose/tree/main/webrtc-android) project on your multiple devices to test peer communication.
 
 ## 🤝 Contribution
