@@ -34,6 +34,7 @@ import io.getstream.webrtc.sample.compose.webrtc.audio.AudioSwitchHandler
 import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnection
 import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerConnectionFactory
 import io.getstream.webrtc.sample.compose.webrtc.peer.StreamPeerType
+import io.getstream.webrtc.sample.compose.webrtc.utils.stringify
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -239,7 +240,7 @@ class WebRtcSessionManagerImpl(
     result.onSuccess {
       signalingClient.sendCommand(SignalingCommand.OFFER, offer.description)
     }
-    logger.d { "[SDP] send offer: $offer" }
+    logger.d { "[SDP] send offer: ${offer.stringify()}" }
   }
 
   private suspend fun sendAnswer() {
@@ -251,7 +252,7 @@ class WebRtcSessionManagerImpl(
     result.onSuccess {
       signalingClient.sendCommand(SignalingCommand.ANSWER, answer.description)
     }
-    logger.d { "[SDP] send answer: $answer" }
+    logger.d { "[SDP] send answer: ${answer.stringify()}" }
   }
 
   private fun handleOffer(sdp: String) {

@@ -111,12 +111,7 @@ class StreamPeerConnection(
    */
   suspend fun createOffer(): Result<SessionDescription> {
     logger.d { "[createOffer] #sfu; #$typeTag; no args" }
-    return createValue {
-      connection.createOffer(
-        it,
-        MediaConstraints()
-      )
-    }
+    return createValue { connection.createOffer(it, mediaConstraints) }
   }
 
   /**
