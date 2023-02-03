@@ -21,7 +21,10 @@ The purpose of this repository is to demonstrate below:
 
 ## ✍️ Technical Content
 
-We're preparing to publish a blog post about **WebRTC in Jetpack Compose**. If you need to understand WebRTC and communication protocols, check out the [HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols/).
+If you want to have a better grasp of how WebRTC works, such as basic concepts of WebRTC, relevant terminologies, and how to establish a peer-to-peer connection and communicate with the signaling server in Android, check out the articles below:
+
+- **[Building a Video Chat App: WebRTC on Android (Part1)](https://getstream.io/blog/webrtc-on-android/)**
+- **[HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols/)**
 
 If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/GetStream/webrtc-in-jetpack-compose/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
 
