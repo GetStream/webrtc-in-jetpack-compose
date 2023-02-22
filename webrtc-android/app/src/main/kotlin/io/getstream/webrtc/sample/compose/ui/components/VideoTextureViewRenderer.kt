@@ -36,7 +36,7 @@ import java.util.concurrent.CountDownLatch
 /**
  * Custom [TextureView] used to render local/incoming videos on the screen.
  */
-open class TextureViewRenderer @JvmOverloads constructor(
+open class VideoTextureViewRenderer @JvmOverloads constructor(
   context: Context,
   attrs: AttributeSet? = null
 ) : TextureView(context, attrs), VideoSink, SurfaceTextureListener {

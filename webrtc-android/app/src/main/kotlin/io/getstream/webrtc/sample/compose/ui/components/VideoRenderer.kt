@@ -41,7 +41,7 @@ fun VideoRenderer(
   modifier: Modifier = Modifier
 ) {
   val trackState: MutableState<VideoTrack?> = remember { mutableStateOf(null) }
-  var view: TextureViewRenderer? by remember { mutableStateOf(null) }
+  var view: VideoTextureViewRenderer? by remember { mutableStateOf(null) }
 
   DisposableEffect(videoTrack) {
     onDispose {
@@ -52,7 +52,7 @@ fun VideoRenderer(
   val sessionManager = LocalWebRtcSessionManager.current
   AndroidView(
     factory = { context ->
-      TextureViewRenderer(context).apply {
+      VideoTextureViewRenderer(context).apply {
         init(
           sessionManager.peerConnectionFactory.eglBaseContext,
           object : RendererCommon.RendererEvents {
@@ -71,7 +71,7 @@ fun VideoRenderer(
 }
 
 private fun cleanTrack(
-  view: TextureViewRenderer?,
+  view: VideoTextureViewRenderer?,
   trackState: MutableState<VideoTrack?>
 ) {
   view?.let { trackState.value?.removeSink(it) }
@@ -81,7 +81,7 @@ private fun cleanTrack(
 private fun setupVideo(
   trackState: MutableState<VideoTrack?>,
   track: VideoTrack,
-  renderer: TextureViewRenderer
+  renderer: VideoTextureViewRenderer
 ) {
   if (trackState.value == track) {
     return
