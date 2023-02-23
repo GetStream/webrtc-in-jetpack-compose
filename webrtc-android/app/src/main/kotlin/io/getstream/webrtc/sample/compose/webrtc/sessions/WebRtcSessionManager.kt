@@ -37,5 +37,7 @@ interface WebRtcSessionManager {
 
   fun enableMicrophone(enabled: Boolean)
 
+  fun enableCamera(enabled: Boolean)
+
   fun disconnect()
 }

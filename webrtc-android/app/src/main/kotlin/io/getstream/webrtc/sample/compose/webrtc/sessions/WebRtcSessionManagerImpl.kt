@@ -214,6 +214,14 @@ class WebRtcSessionManagerImpl(
     audioManager?.isMicrophoneMute = !enabled
   }
 
+  override fun enableCamera(enabled: Boolean) {
+    if (enabled) {
+      videoCapturer.startCapture(resolution.width, resolution.height, 30)
+    } else {
+      videoCapturer.stopCapture()
+    }
+  }
+
   override fun disconnect() {
     // dispose audio & video tracks.
     remoteVideoTrackFlow.replayCache.forEach { videoTrack ->

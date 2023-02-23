@@ -59,6 +59,8 @@ fun VideoCallScreen() {
     val localVideoTrackState by sessionManager.localVideoTrackFlow.collectAsState(null)
     val localVideoTrack = localVideoTrackState
 
+    var callMediaState by remember { mutableStateOf(CallMediaState()) }
+
     if (remoteVideoTrack != null) {
       VideoRenderer(
         videoTrack = remoteVideoTrack,
@@ -68,7 +70,7 @@ fun VideoCallScreen() {
       )
     }
 
-    if (localVideoTrack != null) {
+    if (localVideoTrack != null && callMediaState.isCameraEnabled) {
       FloatingVideoRenderer(
         modifier = Modifier
           .size(width = 150.dp, height = 210.dp)
@@ -81,7 +83,6 @@ fun VideoCallScreen() {
     }
 
     val activity = (LocalContext.current as? Activity)
-    var callMediaState by remember { mutableStateOf(CallMediaState()) }
 
     VideoCallControls(
       modifier = Modifier
@@ -98,6 +99,7 @@ fun VideoCallScreen() {
           is CallAction.ToggleCamera -> {
             val enabled = callMediaState.isCameraEnabled.not()
             callMediaState = callMediaState.copy(isCameraEnabled = enabled)
+            sessionManager.enableCamera(enabled)
           }
           CallAction.FlipCamera -> sessionManager.flipCamera()
           CallAction.LeaveCall -> {
