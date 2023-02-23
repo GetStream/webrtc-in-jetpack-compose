@@ -53,10 +53,10 @@ fun VideoCallScreen() {
   ) {
     var parentSize: IntSize by remember { mutableStateOf(IntSize(0, 0)) }
 
-    val remoteVideoTrackState by sessionManager.remoteVideoSinkFlow.collectAsState(null)
+    val remoteVideoTrackState by sessionManager.remoteVideoTrackFlow.collectAsState(null)
     val remoteVideoTrack = remoteVideoTrackState
 
-    val localVideoTrackState by sessionManager.localVideoSinkFlow.collectAsState(null)
+    val localVideoTrackState by sessionManager.localVideoTrackFlow.collectAsState(null)
     val localVideoTrack = localVideoTrackState
 
     if (remoteVideoTrack != null) {

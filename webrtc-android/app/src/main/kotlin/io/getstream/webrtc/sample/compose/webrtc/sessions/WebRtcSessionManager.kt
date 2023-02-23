@@ -27,9 +27,9 @@ interface WebRtcSessionManager {
 
   val peerConnectionFactory: StreamPeerConnectionFactory
 
-  val localVideoSinkFlow: SharedFlow<VideoTrack>
+  val localVideoTrackFlow: SharedFlow<VideoTrack>
 
-  val remoteVideoSinkFlow: SharedFlow<VideoTrack>
+  val remoteVideoTrackFlow: SharedFlow<VideoTrack>
 
   fun onSessionScreenReady()
 
