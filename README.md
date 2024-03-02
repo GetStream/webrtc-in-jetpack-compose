@@ -23,9 +23,9 @@ The purpose of this repository is to demonstrate below:
 
 If you want to have a better grasp of how WebRTC works, such as basic concepts of WebRTC, relevant terminologies, and how to establish a peer-to-peer connection and communicate with the signaling server in Android, check out the articles below:
 
-- **[Building a Video Chat App: WebRTC on Android (Part1)](https://getstream.io/blog/webrtc-on-android?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
-- **[Building a Video Chat App: WebRTC in Jetpack Compose (Part2)](https://getstream.io/blog/webrtc-jetpack-compose?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
-- **[HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
+- **[Building a Video Chat App: WebRTC on Android (Part1)](https://getstream.io/blog/webrtc-on-android/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
+- **[Building a Video Chat App: WebRTC in Jetpack Compose (Part2)](https://getstream.io/blog/webrtc-jetpack-compose/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
+- **[HTTP, WebSocket, gRPC or WebRTC: Which Communication Protocol is Best For Your App?](https://getstream.io/blog/communication-protocols/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**
 
 If you'd like to get notified as we release future posts, join the **[watchers](https://github.com/GetStream/webrtc-in-jetpack-compose/watchers)** on GitHub or follow **[Stream](https://twitter.com/getstream_io)** on Twitter. You can also follow the __[author](https://github.com/skydoves)__ of this repository on GitHub.
 
@@ -34,12 +34,12 @@ If you'd like to get notified as we release future posts, join the **[watchers](
 </a>
 
 ## 🛥 Stream Chat and Voice & Video calling SDK
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__! We're also planning to release voice & video calling SDK very soon! Check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**, if you want early access to our SDK.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Compose Chat SDK for Messaging](https://getstream.io/chat/sdk/compose/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)__! We're also planning to release voice & video calling SDK very soon! Check out the **[Video & Voice Calling API on Stream's Global Edge Network](https://getstream.io/video/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)**, if you want early access to our SDK.
 
 - [Stream Video SDK for Android on GitHub](https://github.com/getStream/stream-video-android)
-- [Video Call Tutorial](https://getstream.io/video/docs/android/tutorials/video-calling?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
-- [Audio Rooom Tutorial](https://getstream.io/video/docs/android/tutorials/audio-room?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
-- [Livestream Tutorial](https://getstream.io/video/docs/android/tutorials/livestream?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
+- [Video Call Tutorial](https://getstream.io/video/docs/android/tutorials/video-calling/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
+- [Audio Rooom Tutorial](https://getstream.io/video/docs/android/tutorials/audio-room/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
+- [Livestream Tutorial](https://getstream.io/video/docs/android/tutorials/livestream/?utm_source=Github&utm_medium=Github_Repo_Content_Ad&utm_content=Developer&utm_campaign=Github_Aug2023_Jaewoong_MeetingRoomCompose&utm_term=DevRelOss)
 
 ## 📲 Download APK
 Go to the [Releases](https://github.com/GetStream/webrtc-in-jetpack-compose/releases) to download the latest APK.
