@@ -41,3 +41,18 @@ dependencies {
     implementation "io.ktor:ktor-client-logging-jvm:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 }
+
+// JAR task configuration to include the main class in the manifest
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName,  // Sets the Main-Class attribute for JAR execution
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version
+        )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE  // Exclude duplicate files
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }  // Include dependencies in the JAR
+    }
+}
