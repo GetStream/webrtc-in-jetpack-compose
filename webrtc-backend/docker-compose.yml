@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  webrtc_ktro_server:
+#    image: DOCKER IMAGE NAME
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
