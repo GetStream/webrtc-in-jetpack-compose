@@ -1,10 +1,15 @@
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+import java.io.FileInputStream
+import java.util.Properties
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
   id(libs.plugins.android.application.get().pluginId)
   id(libs.plugins.kotlin.android.get().pluginId)
+  id(libs.plugins.compose.compiler.get().pluginId)
 }
+
+val localProperties = Properties()
+localProperties.load(FileInputStream(rootProject.file("local.properties")))
 
 android {
   namespace = "io.getstream.webrtc.sample.compose"
@@ -20,7 +25,7 @@ android {
     buildConfigField(
       "String",
       "SIGNALING_SERVER_IP_ADDRESS",
-      "\"" + gradleLocalProperties(rootDir).getProperty("SIGNALING_SERVER_IP_ADDRESS", "") + "\""
+      localProperties["SIGNALING_SERVER_IP_ADDRESS"].toString()
     )
   }
 
@@ -31,10 +36,6 @@ android {
   buildFeatures {
     compose = true
     buildConfig = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
   }
 
   packagingOptions {
