@@ -21,6 +21,11 @@ jobs:
           distribution: adopt
           java-version: 17
 
+      - name: Create Local Properties
+        run: |
+          touch local.properties          
+          echo -e "127.0.0.1/rtc" >> local.properties
+
       - name: Cache Gradle and wrapper
         uses: actions/cache@v2
         with:
