@@ -72,7 +72,7 @@ To build this project properly, you should follow the instructions below:
 
 ```
 # You should change 192.168.1.123 to your local ip address, which is running the WebRTC backend server.
-SIGNALING_SERVER_IP_ADDRESS=ws://192.168.1.123:8080/rtc
+SIGNALING_SERVER_IP_ADDRESS="ws://192.168.1.123:8080/rtc"
 ```
 
 You will get your local IP address by typing the command below on your terminal:
