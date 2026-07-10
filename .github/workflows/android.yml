@@ -32,7 +32,7 @@ jobs:
           echo -e "127.0.0.1/rtc" >> local.properties
 
       - name: Cache Gradle and wrapper
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
